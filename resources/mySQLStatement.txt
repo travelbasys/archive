@@ -34,13 +34,13 @@ CREATE TABLE Veranstalterrechnung ( file_name VARCHAR(70),
  RBS_Firma VARCHAR(4));
   
 INSERT INTO Veranstalterrechnung ( file_name , Dokumentart , Veranstaltercode, Veranstaltername , Buero , Reisender , Reisedatum , Vorgangsnummer , Reisepreis , R_G , Waehrung , Agenturnummer , Prov_betrag1 , Prov_betrag2 , Prov_betrag3 , Prov_betrag4, Rechnungsbetrag , Inkassoart , Abbucherkennz , Rechnungsdatum , Rechnungsnummer , Barcodenummer , Loeschkennzeichen , Abgleichdatum , RBS_Firma )
-VALUES ( "00000000000981.tif" , "VR" ,  "1007" , "AIR MARITIME SEEREISEN GMBH" , "" , "KOOPS MARLENE" , "2005-03-19" , "605681" , "131" , "G" , "EUR" , "105204" , "3,32" , "0" , "0" , "0" , "0" , "D" , "A" , "2005-01-05" , "WPVRC-0-149383" , "981" , "" , "2005-01-06" , "6055");
+VALUES ( "00000000000981.tif" , "VR" ,  "1007" , "AIR" , "" , "KOOPS" , "2005-03-19" , "605681" , "131" , "G" , "EUR" , "105204" , "3,32" , "0" , "0" , "0" , "0" , "D" , "A" , "2005-01-05" , "WPVRC-0-149383" , "981" , "" , "2005-01-06" , "6055");
  
 INSERT INTO Veranstalterrechnung ( file_name , Dokumentart , Veranstaltercode, Veranstaltername , Buero , Reisender , Reisedatum , Vorgangsnummer , Reisepreis , R_G , Waehrung , Agenturnummer , Prov_betrag1 , Prov_betrag2 , Prov_betrag3 , Prov_betrag4, Rechnungsbetrag , Inkassoart , Abbucherkennz , Rechnungsdatum , Rechnungsnummer , Barcodenummer , Loeschkennzeichen , Abgleichdatum , RBS_Firma )
-VALUES (  "00000000000992.pdf" , "VR" ,  "1007" , "AIR MARITIME SEEREISEN GMBH" , "" , "MALTSEVA" , "2005-03-13" , "8190167" , "3040" , "G" , "EUR" , "110506" , "370,68" , "0" , "0" , "33,75" , "0" , "D" , "A" , "2005-01-05" , "02-827139" , "992" , "" , "2005-01-11" , "6055");
+VALUES (  "00000000000992.pdf" , "VR" ,  "1007" , "AIR GMBH" , "" , "MALTS" , "2005-03-13" , "8190167" , "3040" , "G" , "EUR" , "110506" , "370,68" , "0" , "0" , "33,75" , "0" , "D" , "A" , "2005-01-05" , "02-827139" , "992" , "" , "2005-01-11" , "6055");
 
 INSERT INTO Veranstalterrechnung ( file_name , Dokumentart , Veranstaltercode, Veranstaltername , Buero , Reisender , Reisedatum , Vorgangsnummer , Reisepreis , R_G , Waehrung , Agenturnummer , Prov_betrag1 , Prov_betrag2 , Prov_betrag3 , Prov_betrag4, Rechnungsbetrag , Inkassoart , Abbucherkennz , Rechnungsdatum , Rechnungsnummer , Barcodenummer , Loeschkennzeichen , Abgleichdatum , RBS_Firma )
-VALUES (  "00000000000444.tif" ,  "VR" , "1007" , "AIR MARITIME SEEREISEN GMBH" , "1167" , "SPOETH" , "2005-03-17" , "287948" , "25" , "R" , "EUR" , "110506" ,  "0" , "0" , "0" , "0" , "25" , "R" , "0" , "2005-01-04" , "605563/1" , "444" , "" , "2005-01-12" , "6055"  );
+VALUES (  "00000000000444.tif" ,  "VR" , "1007" , "AIR" , "1167" , "SPOE" , "2005-03-17" , "287948" , "25" , "R" , "EUR" , "110506" ,  "0" , "0" , "0" , "0" , "25" , "R" , "0" , "2005-01-04" , "605563/1" , "444" , "" , "2005-01-12" , "6055"  );
 
 
 CREATE TABLE Ausgangsrechnung_Kostenrechnung ( 
@@ -104,7 +104,7 @@ VALUES (
 "131323",
 "MACHNIK",
 "1159190",	
-"Bremerhaven",
+"Brem",
 "435,54",
 "7810593134",	
 "*10442180 vom 11.10.16",
@@ -264,17 +264,17 @@ Waehrung
 "10000001" ,
 "80000001" ,
 "10001" ,
-"TUI Deutschland GmbH" ,
-"Lars John" ,
+"GmbH" ,
+"Lars" ,
 "" ,
 "" ,
-"Karl-Wiechert-Allee 23" ,
+"Karl" ,
 "30625" ,
-"Hannover" ,
-"Jens Henze" ,
+"H" ,
+"Jens" ,
 "2011-01-01" ,
 "2001" ,
-"Joerg hauschild" ,
+"Joerg" ,
 "006001" ,
 "30003" ,
 "2015-04-01" ,
@@ -331,17 +331,17 @@ Waehrung
 "10000001" ,
 "80000001" ,
 "10001" ,
-"TUI Deutschland GmbH" ,
-"Lars John" ,
+"TUI" ,
+"Lars" ,
 "" ,
 "" ,
-"Karl-Wiechert-Allee 23" ,
+"Karl" ,
 "30625" ,
 "Hannover" ,
-"Jens Henze" ,
+"Jens" ,
 "2011-01-01" ,
 "2001" ,
-"Joerg hauschild" ,
+"Joerg" ,
 "006001" ,
 "30003" ,
 "2015-04-01" ,
