@@ -1,0 +1,7 @@
+http://www.mkyong.com/mongodb/java-mongodb-hello-world-example/
+https://www.mkyong.com/mongodb/java-mongodb-save-image-example/
+https://code.tutsplus.com/tutorials/full-text-search-in-mongodb--cms-24835
+http://softwarerecs.stackexchange.com/questions/26285/whats-the-best-way-to-index-pdf-or-word-document-for-full-text-search
+
+
+http://api.mongodb.com/java/3.3/

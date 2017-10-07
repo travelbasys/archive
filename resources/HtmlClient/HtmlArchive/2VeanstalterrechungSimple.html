@@ -1,0 +1,76 @@
+	<!--******************************** Einfache Suche Veranstalterrechnung***********************************************-->
+	<!--  <object type="text/html" data="/Archive/archiveSeite/formVeranstalterrechnung.html" style="width: 100%; height: 100%;"> </object>  -->
+
+	<form method="post" action="/archive/VeranstalterrechnungArchive"
+		target="myIFrame" id="formIDVeranstalterrechnung"
+		style="display: none;">
+
+		<table class="formtable">
+			<tr>
+				<td>Firma</td>
+				<td><input class="forminput" id="Firma" name="Firma" value="" /></td>
+			</tr>
+			<tr>
+				<td>Barcode &nbsp; &nbsp; <select name="BarcodeOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Barcode" name="Barcode"
+					value="" /></td>
+			</tr>
+			<tr>
+				<td>Veranstaltercode</td>
+				<td><input class="forminput" id="Veranstaltercode"
+					name="Veranstaltercode" value="" /></td>
+			</tr>
+			<tr>
+				<td>Veranstaltername</td>
+				<td><input class="forminput" id="Veranstaltername"
+					name="Veranstaltername" value="" /></td>
+			</tr>
+			<tr>
+				<td>Büro</td>
+				<td><input class="forminput" id="Buero" name="Buero" value="" /></td>
+			</tr>
+			<tr>
+				<td>Reisender</td>
+				<td><input class="forminput" id="Reisender" name="Reisender"
+					value="" /></td>
+			</tr>
+			<tr>
+				<td>Reisedatum &nbsp; &nbsp; <select name="reiseDatumoperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Reisedatum" name="Reisedatum"
+					value="" />
+					<a href="#" onclick="cal.select(document.getElementById('Reisedatum'),'ReisedatumPopupSimple','yyyy-MM-dd'); return false;" name="ReisedatumPopupSimple" id="ReisedatumPopupSimple">select</a>
+					</td>
+			</tr>
+			
+			<tr>
+			<td><u>Freier Text (elastic search)</u></td>
+			<td><input class="forminput" id="FreeText" name="FreeText" value="" /></td>
+		</tr>
+			<tr>
+				<td>SessionID</td>
+				<td><input class="forminput" id="SessionID" name="SessionID"
+					value="{*SessionID*}" readonly /></td>
+			</tr>
+			<tr>
+				<td><input class="formbutton" type="submit" value="Suchen" /></td>
+				<td><input class="formbutton" type="button"
+					onclick="resetFunction()" value="Reset"></td>
+			</tr>
+		</table>
+	</form>

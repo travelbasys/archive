@@ -1,0 +1,60 @@
+
+<!-- ///////////////////////////////////////////////////////////// -->
+
+<form method="post" action="/archive/MidocoBelegeArchive"
+	target="myIFrame" id="formIDMidocoBelege">
+
+	<table class="formtable">
+		<tr>
+			<td>Firma</td>
+			<td><input type="text" class="forminput" id="Firma_Mi" name="Firma" value="2501" onblur="validateFirma(this)"/></td>
+		<!-- 	<input type="text" id="input_id" onblur="myFunction(this)">  -->
+		</tr>
+		<tr>
+			<td>Belegnummer &nbsp; &nbsp; <select
+				name="BelegnummerOperation">
+					<option value="=">=</option>
+					<option value="<">&lt;</option>
+					<option value="<=">&lt;=</option>
+					<option value=">">&gt;</option>
+					<option value=">=">&gt;=</option>
+					<option value="<>">&lt;&gt;</option>
+			</select>
+			</td>
+			<td><input class="forminput" id="Belegnummer" name="Belegnummer"
+				value="" /></td>
+		</tr>
+
+		<tr>
+			<td>Belegdatum &nbsp; &nbsp; <select name="BelegdatumOperation">
+					<option value="=">=</option>
+					<option value="<">&lt;</option>
+					<option value="<=">&lt;=</option>
+					<option value=">">&gt;</option>
+					<option value=">=">&gt;=</option>
+					<option value="<>">&lt;&gt;</option>
+			</select>
+			</td>
+			<td><input class="forminput" id="BelegdatumSIM" name="BelegdatumSIM"
+				value="" />
+				<a href="#" onclick="cal.select(document.getElementById('BelegdatumSIM'),'BelegdatumSIM','yyyy-MM-dd'); return false;" name="BelegdatumSIM" id="BelegdatumSIM">select</a>
+				</td>
+		</tr>
+
+		<tr>
+			<td><u>Freier Text (elastic search)</u></td>
+			<td><input class="forminput" id="FreeText" name="FreeText" value="BBBBBBBBBBBBBBB" /></td>
+		</tr>
+
+		<tr>
+			<td>SessionID</td>
+			<td><input class="forminput" id="SessionID" name="SessionID"
+				value="{*SessionID*}" readonly /></td>
+		</tr>
+		<tr>
+			<td><input class="formbutton" type="submit" value="Suchen" /></td>
+			<td><input class="formbutton" type="button"
+				onclick="resetFunction()" value="Reset"></td>
+		</tr>
+	</table>
+</form>

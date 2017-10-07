@@ -1,0 +1,158 @@
+
+	<!--******************************** Einfache Suche Ausgangsrechnungen/Kostenrechnungen ***********************************************-->
+	<!--  action="/archive/KostenrechnungenArchive" oder   action="/archive/KostenrechnungenArchive"  -->
+	<form method="post" action="??" target="myIFrame"
+		id="formIDAusgangsrechnungenKostenrechnungen" style="display: none;">
+
+		<table class="formtable">
+			<tr>
+				<td>Firma</td>
+				<td><input class="forminput" id="Firma" name="Firma" value="" /></td>
+			</tr>
+			<tr>
+				<td>Barcodenummer &nbsp; &nbsp; <select
+					name="BarcodenummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Barcodenummer"
+					name="Barcodenummer" value="" /></td>
+			</tr>
+			<tr>
+				<td>Buchungskreis &nbsp; &nbsp; <select
+					name="BuchungskreisOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Buchungskreis"
+					name="Buchungskreis" value="" /></td>
+			</tr>
+			<tr>
+				<td>Belegnummer &nbsp; &nbsp; <select
+					name="BelegnummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Belegnummer"
+					name="Belegnummer" value="" /></td>
+			</tr>
+			<tr>
+				<td>Belegart &nbsp; &nbsp; <select name="BelegartOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Belegart" name="Belegart"
+					value="" /></td>
+			</tr>
+
+			<!--  11/17/16 12:00:00 AM search/result 
+			http://calendarview.org/
+			http://www.mattkruse.com/javascript/calendarpopup/index.html
+			-->
+			<tr>
+				<td>
+				Belegdatum &nbsp; &nbsp; <select name="BelegdatumOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td>
+				<input class="forminput" id="Belegdatum" name="Belegdatum" />
+					<a href="#" onclick="cal.select(document.getElementById('Belegdatum'),'BelegdatumAusgangsrechnungenKostenrechnungenPopupSimple','yyyy-MM-dd'); return false;" name="BelegdatumAusgangsrechnungenKostenrechnungenPopupSimple" id="BelegdatumAusgangsrechnungenKostenrechnungenPopupSimple">select</a>
+				<!-- 
+				<input name="date1" value="" size="25" type="text">
+				<a id="anchor1" href="#" onclick="cal1.select(document.forms[0].date1,'anchor1','MM/dd/yyyy'); return false;" 
+				title="cal1.select(document.forms[0].date1,'anchor1','MM/dd/yyyy'); return false;">select</a>
+				<!-- TODO Das fuehrt zum Problem beim Disply 
+				<form name="example">
+				
+				</form>
+				 -->
+				</td>	
+			</tr>
+			
+			<tr>
+			<td><u>Freier Text (elastic search)</u></td>
+			<td><input class="forminput" id="FreeText" name="FreeText" value="" /></td>
+		</tr>
+			<tr>
+				<td>Referenz-BelegNr &nbsp; &nbsp; <select
+					name="ReferenzBelegNrOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="ReferenzBelegNr"
+					name="ReferenzBelegNr" value="" /></td>
+			</tr>
+			<tr>
+				<td>Kontonummer &nbsp; &nbsp; <select
+					name="KontonummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Kontonummer"
+					name="Kontonummer" value="" /></td>
+			</tr>
+			<tr>
+				<td>Betrag &nbsp; &nbsp; <select name="BetragOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Betrag" name="Betrag" value="" /></td>
+			</tr>
+			<tr>
+				<td>Zuordnung &nbsp; &nbsp; <select name="ZuordnungOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Zuordnung" name="Zuordnung"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>SessionID</td>
+				<td><input class="forminput" id="SessionID" name="SessionID"
+					value="{*SessionID*}" readonly /></td>
+			</tr>
+			<tr>
+				<td><input class="formbutton" type="submit" value="Suchen" /></td>
+				<td><input class="formbutton" type="button"
+					onclick="resetFunction()" value="Reset"></td>
+			</tr>
+		</table>
+	</form>

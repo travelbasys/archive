@@ -1,0 +1,360 @@
+cd "C:\Program Files\MySQL\MySQL Server 5.7\bin\"
+mysql --user=root --password=mysql
+
+Drop DATABASE Archive;
+
+CREATE DATABASE Archive;
+
+USE Archive;
+
+CREATE TABLE Veranstalterrechnung ( file_name VARCHAR(70),
+ Dokumentart VARCHAR(20),
+ Veranstaltercode VARCHAR(20) ,
+ Veranstaltername VARCHAR(70) ,
+ Buero VARCHAR(20) ,         
+ Reisender VARCHAR(20) ,
+ Reisedatum DATE ,
+ Vorgangsnummer VARCHAR(20) ,
+ Reisepreis VARCHAR(20) ,
+ R_G VARCHAR(20) ,
+ Waehrung VARCHAR(20) ,
+ Agenturnummer VARCHAR(20) ,
+ Prov_betrag1 VARCHAR(20) ,
+ Prov_betrag2 VARCHAR(20) ,
+ Prov_betrag3 VARCHAR(20) ,
+ Prov_betrag4 VARCHAR(20) ,
+ Rechnungsbetrag VARCHAR(20) ,
+ Inkassoart VARCHAR(20) ,
+ Abbucherkennz VARCHAR(20) ,
+ Rechnungsdatum DATE ,
+ Rechnungsnummer VARCHAR(20) ,
+ Barcodenummer VARCHAR(20) ,
+ Loeschkennzeichen VARCHAR(20) ,
+ Abgleichdatum DATE,
+ RBS_Firma VARCHAR(4));
+  
+INSERT INTO Veranstalterrechnung ( file_name , Dokumentart , Veranstaltercode, Veranstaltername , Buero , Reisender , Reisedatum , Vorgangsnummer , Reisepreis , R_G , Waehrung , Agenturnummer , Prov_betrag1 , Prov_betrag2 , Prov_betrag3 , Prov_betrag4, Rechnungsbetrag , Inkassoart , Abbucherkennz , Rechnungsdatum , Rechnungsnummer , Barcodenummer , Loeschkennzeichen , Abgleichdatum , RBS_Firma )
+VALUES ( "00000000000981.tif" , "VR" ,  "1007" , "AIR MARITIME SEEREISEN GMBH" , "" , "KOOPS MARLENE" , "2005-03-19" , "605681" , "131" , "G" , "EUR" , "105204" , "3,32" , "0" , "0" , "0" , "0" , "D" , "A" , "2005-01-05" , "WPVRC-0-149383" , "981" , "" , "2005-01-06" , "6055");
+ 
+INSERT INTO Veranstalterrechnung ( file_name , Dokumentart , Veranstaltercode, Veranstaltername , Buero , Reisender , Reisedatum , Vorgangsnummer , Reisepreis , R_G , Waehrung , Agenturnummer , Prov_betrag1 , Prov_betrag2 , Prov_betrag3 , Prov_betrag4, Rechnungsbetrag , Inkassoart , Abbucherkennz , Rechnungsdatum , Rechnungsnummer , Barcodenummer , Loeschkennzeichen , Abgleichdatum , RBS_Firma )
+VALUES (  "00000000000992.pdf" , "VR" ,  "1007" , "AIR MARITIME SEEREISEN GMBH" , "" , "MALTSEVA" , "2005-03-13" , "8190167" , "3040" , "G" , "EUR" , "110506" , "370,68" , "0" , "0" , "33,75" , "0" , "D" , "A" , "2005-01-05" , "02-827139" , "992" , "" , "2005-01-11" , "6055");
+
+INSERT INTO Veranstalterrechnung ( file_name , Dokumentart , Veranstaltercode, Veranstaltername , Buero , Reisender , Reisedatum , Vorgangsnummer , Reisepreis , R_G , Waehrung , Agenturnummer , Prov_betrag1 , Prov_betrag2 , Prov_betrag3 , Prov_betrag4, Rechnungsbetrag , Inkassoart , Abbucherkennz , Rechnungsdatum , Rechnungsnummer , Barcodenummer , Loeschkennzeichen , Abgleichdatum , RBS_Firma )
+VALUES (  "00000000000444.tif" ,  "VR" , "1007" , "AIR MARITIME SEEREISEN GMBH" , "1167" , "SPOETH" , "2005-03-17" , "287948" , "25" , "R" , "EUR" , "110506" ,  "0" , "0" , "0" , "0" , "25" , "R" , "0" , "2005-01-04" , "605563/1" , "444" , "" , "2005-01-12" , "6055"  );
+
+
+CREATE TABLE Ausgangsrechnung_Kostenrechnung ( 
+file_name VARCHAR(70),
+Dokumentart VARCHAR(20),
+Barcode  VARCHAR(20) ,
+RBS_Firma  VARCHAR(4) ,
+Bukrs VARCHAR(20) ,
+BelegNr VARCHAR(20) ,
+GJahr VARCHAR(20) ,
+Belegart VARCHAR(20) ,
+Belegdatum DATE ,
+Buchungsdatum DATE ,
+Belegkopftext VARCHAR(20) ,
+Referenz_BelegNr VARCHAR(20) ,
+Dauer_BelegNr VARCHAR(20) ,
+Waehrung VARCHAR(20) ,
+Mappe VARCHAR(20) ,
+Erfasst VARCHAR(20) ,
+Erfasser VARCHAR(20) ,
+DKonto VARCHAR(20) ,
+DOrt VARCHAR(20) ,
+DBetrag VARCHAR(20) ,
+DZuordnung VARCHAR(20) ,
+DSGText VARCHAR(70) ,
+DXRef1 VARCHAR(20) ,
+DXRef2 VARCHAR(20) ,
+DXRef3 VARCHAR(20) ,
+Mandant VARCHAR(20) ,
+System_ID VARCHAR(20) ,
+User_Name VARCHAR(20) ,
+TagesDatum DATE ,
+TagesZeit TIME );
+
+
+INSERT INTO Ausgangsrechnung_Kostenrechnung ( file_name , Dokumentart , Barcode  , RBS_Firma  , Bukrs , BelegNr , GJahr , Belegart , Belegdatum , Buchungsdatum , Belegkopftext , Referenz_BelegNr , Dauer_BelegNr , Waehrung , Mappe , Erfasst , Erfasser , DKonto , DOrt , DBetrag , DZuordnung ,
+DSGText , DXRef1 , DXRef2 , DXRef3 , Mandant , System_ID , User_Name , TagesDatum , TagesZeit )
+VALUES ( "98155101710003.pdf" , "AR" , "98155101710003" , "6055" , "0155" , "0101710003" , "2017" , "DR" , "2016-10-05" , "2016-10-05" , "98155101710003" , "" , "" , "EUR" , "","100903" , "KÖPKE" , "979900" , "Hamburg" ,"618,8" , "REISELAND GMBH" , 
+"*RG 101710003 Pauschalabr.des Büroleiter-Meetings" , "" , "" , "" , "085" , "P77" , "BATCH_JOB" , "2016-10-25" , "00:17:59"); 
+	
+	
+INSERT INTO Ausgangsrechnung_Kostenrechnung ( file_name , Dokumentart , Barcode  , RBS_Firma  , Bukrs , BelegNr , GJahr , Belegart , Belegdatum , Buchungsdatum , Belegkopftext , Referenz_BelegNr , Dauer_BelegNr , Waehrung , Mappe , Erfasst , Erfasser , DKonto , DOrt , DBetrag , DZuordnung ,
+DSGText , DXRef1 , DXRef2 , DXRef3 , Mandant , System_ID , User_Name , TagesDatum , TagesZeit )
+VALUES ( 
+
+"7020000160979.tif" , 
+"KR" ,
+"7020000160979", 
+"2501" , 
+"0001" , 
+"0111153563" ,
+"2016",
+"KR",	
+"2016-10-10",
+"2016-10-31",
+"07020000160979",
+"7810593134",
+"" ,	
+"EUR",
+"",	
+"131323",
+"MACHNIK",
+"1159190",	
+"Bremerhaven",
+"435,54",
+"7810593134",	
+"*10442180 vom 11.10.16",
+"",	
+"",
+"",	
+"070",	
+"Z77",
+"BATCH_JOB",	
+"2016-11-01",	
+"01:19:13");
+	
+INSERT INTO Ausgangsrechnung_Kostenrechnung ( file_name , Dokumentart , Barcode  , RBS_Firma  , Bukrs , BelegNr , GJahr , Belegart , Belegdatum , Buchungsdatum , Belegkopftext , Referenz_BelegNr , Dauer_BelegNr , Waehrung , Mappe , Erfasst , Erfasser , DKonto , DOrt , DBetrag , DZuordnung ,
+DSGText , DXRef1 , DXRef2 , DXRef3 , Mandant , System_ID , User_Name , TagesDatum , TagesZeit )
+VALUES ( 
+"7020000160978.tif" , 
+"KR" ,		
+"7020000160978",
+"2501",
+"0001",
+"0111153561",
+"2016",
+"KR",
+"2016-10-18",
+"2016-10-31",
+"07020000160978",
+"91457980",
+"",	
+"EUR",
+"",	
+"130618",
+"MACHNIK",
+"1152448",
+"Brüsewitz",
+"690,32",
+"91457980",
+"*91549 vom 19.10.16",
+"",	
+"",	
+"",
+"070",
+"Z77",
+"BATCH_JOB",
+"2016-11-01",
+"01:19:13"
+); 
+	
+	
+
+CREATE TABLE user (UserID VARCHAR(70), 
+Password VARCHAR(70) , 
+Firstname VARCHAR(70), 
+Lastname VARCHAR(70) , 
+Addresse VARCHAR(70) ,
+Company VARCHAR(70) , 
+Branch VARCHAR(70) , 
+Office VARCHAR(70) , 
+Agent VARCHAR(70)) ; 
+
+INSERT INTO user ( UserID , Password , Firstname , Lastname  , Addresse , Company  , Branch  , Office  , Agent)
+VALUES ( "hqx" , MD5('hqx') , "" , "" , "" , "" , "" , "" , "" );
+
+
+CREATE TABLE session (SessionID VARCHAR(70), 
+Lastaccess DATETIME , 
+Timeout VARCHAR(70)) ; 
+ 
+ 
+ 
+ UPDATE Session Set Lastaccess = '2015-10-10 00:00:00' where SessionID = '1476437838829';
+ 
+ UPDATE Ausgangsrechnung_Kostenrechnung Set file_name = '07020000160979.tif' where file_name = '7020000160979.tif';
+ UPDATE Ausgangsrechnung_Kostenrechnung Set Barcode = '07020000160979' where Barcode = '7020000160979';
+ 
+ UPDATE Ausgangsrechnung_Kostenrechnung Set file_name = '07020000160978.tif' where file_name = '7020000160978.tif';
+ UPDATE Ausgangsrechnung_Kostenrechnung Set Barcode = '07020000160978' where Barcode = '7020000160978';
+ 
+ 
+ 
+ CREATE TABLE MidocoBelege ( file_name VARCHAR(70),
+Dokumentart VARCHAR(20),
+RBS_Firma VARCHAR(4) ,
+Belegnummer VARCHAR(20) ,
+Belegdatum DATE , 
+Mandant VARCHAR(20) ,
+Buchungskreis  VARCHAR(20) ,
+Agenturnummer VARCHAR(20) ,
+Belegart VARCHAR(20) ,
+Bezugsnummer VARCHAR(20) ,
+Vorgangsnummer VARCHAR(20) ,
+Kundennummer VARCHAR(20) ,
+Name1 VARCHAR(20) ,
+Name2 VARCHAR(20) ,
+Name3 VARCHAR(20) ,
+Name4 VARCHAR(20) ,
+Strasse VARCHAR(70) ,
+PLZ VARCHAR(20) ,
+Ort VARCHAR(20) ,
+Reisender VARCHAR(20) ,
+Reisedatum DATE ,
+Expedientennummer VARCHAR(20) ,
+Expedient VARCHAR(20) ,
+Kostenstelle  VARCHAR(20) ,
+Auftragsnummer VARCHAR(20) ,
+Auftragsdatum DATE ,
+Besteller VARCHAR(20) ,
+Netto1 VARCHAR(20) ,
+Netto2 VARCHAR(20) ,
+StKz2 VARCHAR(20) ,
+MwSt2 VARCHAR(20) ,
+Netto3 VARCHAR(20) ,
+StKz3 VARCHAR(20) ,
+MwSt3 VARCHAR(20) ,
+Brutto VARCHAR(20) ,
+Waehrung VARCHAR(20)   
+);
+ 
+INSERT INTO MidocoBelege ( 
+file_name , 
+ Dokumentart ,
+   RBS_Firma  ,
+     Belegnummer ,
+      Belegdatum , 
+Agenturnummer  ,
+Belegart  ,
+Bezugsnummer  ,
+Vorgangsnummer  ,
+Kundennummer  ,
+Name1  ,
+Name2  ,
+Name3  ,
+Name4  ,
+Strasse  ,
+PLZ  ,
+Ort  ,
+Reisender  ,
+Reisedatum  ,
+Expedientennummer  ,
+Expedient  ,
+Kostenstelle ,
+Auftragsnummer  ,
+Auftragsdatum  ,
+Besteller  ,
+Netto1  ,
+Netto2  ,
+StKz2  ,
+MwSt2  ,
+Netto3  ,
+StKz3  ,
+MwSt3  ,
+Brutto  ,
+Waehrung
+)
+ VALUES ( "19896075207607.pdf" , "MB" , "2501" , "19896075207607" , "2011-01-01" ,
+ "123456/789" , 
+"Rechnung" , 
+"10000001" ,
+"80000001" ,
+"10001" ,
+"TUI Deutschland GmbH" ,
+"Lars John" ,
+"" ,
+"" ,
+"Karl-Wiechert-Allee 23" ,
+"30625" ,
+"Hannover" ,
+"Jens Henze" ,
+"2011-01-01" ,
+"2001" ,
+"Joerg hauschild" ,
+"006001" ,
+"30003" ,
+"2015-04-01" ,
+"" ,
+"10,00" ,
+"20,00" ,
+"7,00" ,
+"1,40" ,
+"30,00" ,
+"19,00" ,
+"5,70" ,
+"67,10" ,
+"EUR"
+  );
+ 
+ 
+ 
+ 
+ 
+ INSERT INTO MidocoBelege ( file_name ,  Dokumentart ,  RBS_Firma  ,  Belegnummer , Belegdatum , 
+Agenturnummer  ,
+Belegart  ,
+Bezugsnummer  ,
+Vorgangsnummer  ,
+Kundennummer  ,
+Name1  ,
+Name2  ,
+Name3  ,
+Name4  ,
+Strasse  ,
+PLZ  ,
+Ort  ,
+Reisender  ,
+Reisedatum  ,
+Expedientennummer  ,
+Expedient  ,
+Kostenstelle ,
+Auftragsnummer  ,
+Auftragsdatum  ,
+Besteller  ,
+Netto1  ,
+Netto2  ,
+StKz2  ,
+MwSt2  ,
+Netto3  ,
+StKz3  ,
+MwSt3  ,
+Brutto  ,
+Waehrung
+)
+ VALUES ( "20110101_12345678.pdf" , "MB" , "2501" , "10000002" , "2011-01-01" ,
+ "123456/789" , 
+"Rechnung" , 
+"10000001" ,
+"80000001" ,
+"10001" ,
+"TUI Deutschland GmbH" ,
+"Lars John" ,
+"" ,
+"" ,
+"Karl-Wiechert-Allee 23" ,
+"30625" ,
+"Hannover" ,
+"Jens Henze" ,
+"2011-01-01" ,
+"2001" ,
+"Joerg hauschild" ,
+"006001" ,
+"30003" ,
+"2015-04-01" ,
+"" ,
+"10,00" ,
+"20,00" ,
+"7,00" ,
+"1,40" ,
+"30,00" ,
+"19,00" ,
+"5,70" ,
+"67,10" ,
+"EUR"
+  );
+ 
+ 

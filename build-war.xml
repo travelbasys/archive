@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<project name="Build RBSweb middleware" default="deploy">
+	<description>
+		Generate war file and save it in build/lib folder
+		
+    </description>
+	<!-- Properties -->
+	<property environment="env" />
+	
+	<property name="warFilePath" value="build/lib" />
+	<property name="warFileName" value="archive.war" />
+	<property name="warFile" value="${warFilePath}/${warFileName}" />
+	
+	<property name="manifestFile" value="resources/META-INF/MANIFEST.MF" />
+	<property name="webXmlFile" value="resources/WEB-INF/web.xml" />
+	
+	<!-- ================================= 
+		          target: war              
+	 ================================= -->
+	
+	<target name="deploy" depends="war">
+		<property name="jboss.home" value="${env.jboss_home}" />
+		<property name="jboss.standalone.contentArchive" location="${jboss.home}/welcome-content/Archive-Web" />
+		<property name="jboss.standalone.deployment" location="${jboss.home}/standalone/deployments" />
+		
+		<copy todir="${jboss.standalone.contentArchive}">
+		    <fileset dir="resources/HtmlClient"/>
+		  </copy>
+		
+		<copy file="build/lib/${warFileName}" tofile="${jboss.standalone.deployment}/${warFileName}" />
+		
+	</target>
+		
+	<target name="war" depends="generateHtmlArchive">
+		<war destfile="${warFile}" manifest="${manifestFile}" needxmlfile='false' update="true">
+		
+			<zipfileset  dir="bin" prefix="WEB-INF/classes">
+				<include name="**/*.class" />
+				<include name="**/*.properties" />
+			</zipfileset >
+
+            <zipfileset  dir="lib" prefix="WEB-INF/lib">
+				<include name="**/*.jar" />
+			</zipfileset >
+			
+            <zipfileset  dir="resources/HtmlClient" >
+				<include name="**/index.html" />
+			</zipfileset >
+					
+		</war>
+	</target>
+
+	<target name="generateHtmlArchive" depends="mkDir">
+		  <merge tofile="resources/HtmlClient/Archive.html">
+		        <sourcefiles>
+		            <fileset dir="resources/HtmlClient/HtmlArchive"></fileset>
+		        </sourcefiles>
+		    </merge>
+	</target>
+	
+	<target name="mkDir" depends="deleteOld">
+		<mkdir dir="${warFilePath}" />
+	</target>
+	
+	<target name="deleteOld">
+		  <delete includeemptydirs="true" failonerror="false">
+	        <fileset dir="${warFilePath}" includes="**/*"/>
+	      </delete>
+	</target>
+
+	
+	   <!-- = = = = = = = = = = = = = = = = =
+	     macrodef: merge          
+	    = = = = = = = = = = = = = = = = = -->
+	    <macrodef name="merge">
+	        <attribute name="tofile"></attribute>
+	        <element name="sourcefiles"></element>
+	       
+	        <sequential>
+	            <tempfile property="temp.file" prefix="ant.merge." deleteonexit="true"></tempfile>
+	           
+	            <concat destfile="${temp.file}" fixlastline="true">
+	                <sourcefiles></sourcefiles>
+	            </concat>
+	           
+	            <copy file="${temp.file}" tofile="@{tofile}">
+	            </copy>
+	        </sequential>
+	    </macrodef>
+</project>

@@ -1,0 +1,9 @@
+use ElasticSearch
+show collections
+db.FileText.find()
+
+ db.FileText.find({$text: {$search: "Wildfly"}}, {score: {$meta: "textScore"}})
+ db.FileText.createIndex({"FullText":"text","content":"text"})
+ 
+ db.FileText.find({$text: {$search: "Wurstbrot"}}, {score: {$meta: "textScore"}})
+ db.FileText.find({$text: {$search: "Wurstbrot"}})

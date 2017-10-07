@@ -1,0 +1,23 @@
+
+<!--******************************** Einfache Suche Buchungsprotkolle ***********************************************-->
+<!--  action="/archive/BuchungsprotkolleArchive"  -->
+<form method="post" action="/archive/BuchungsprotkolleArchive"
+	target="myIFrame" id="formIDBuchungsprotkolle" style="display: none;">
+
+	<table class="formtable">
+		<tr>
+			<td>Firma</td>
+			<td><input class="forminput" id="Firma" name="Firma" value="" /></td>
+		</tr>
+		<tr>
+			<td>SessionID</td>
+			<td><input class="forminput" id="SessionID" name="SessionID"
+				value="{*SessionID*}" readonly /></td>
+		</tr>
+		<tr>
+			<td><input class="formbutton" type="submit" value="Suchen" /></td>
+			<td><input class="formbutton" type="button"
+				onclick="resetFunction()" value="Reset"></td>
+		</tr>
+	</table>
+</form>

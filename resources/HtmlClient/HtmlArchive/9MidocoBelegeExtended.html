@@ -1,0 +1,374 @@
+<!--******************************** Erweiterte suche MidocoBelege***********************************************-->
+	<form method="post" action="/archive/MidocoBelegeArchive"
+		target="myIFrame" id="formIDMidocoBelegeExtended"
+		style="display: none;">
+
+		<table class="formtable">
+			<tr>
+				<td>Firma</td>
+				<td><input class="forminput" id="Firma" name="Firma" value="" /></td>
+			</tr>
+			<tr>
+				<td>Belegnummer &nbsp; &nbsp; <select
+					name="BelegnummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Belegnummer" name="Belegnummer"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Belegdatum &nbsp; &nbsp; <select name="BelegdatumOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="BelegdatumMIDEXT" name="BelegdatumMIDEXT"
+					value="" />
+					<a href="#" onclick="cal.select(document.getElementById('BelegdatumMIDEXT'),'BelegdatumPopupExtended','yyyy-MM-dd'); return false;" name="BelegdatumPopupExtended" id="BelegdatumPopupExtended">select</a>
+					</td>
+			</tr>
+
+			<tr>
+			<td><u>Freier Text (elastic search)</u> </td>
+			<td><input class="forminput" id="FreeText" name="FreeText" value="" /></td>
+		</tr>
+			<tr>
+				<td>Mandant</td>
+				<td><input class="forminput" id="Mandant" name="Mandant"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Buchungskreis</td>
+				<td><input class="forminput" id="Buchungskreis"
+					name="Buchungskreis" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Agenturnummer&nbsp; &nbsp; <select
+					name="AgenturnummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Agenturnummer" name="Agenturnummer"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Belegart</td>
+				<td><input class="forminput" id="Belegart" name="Belegart"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Bezugsnummer&nbsp; &nbsp; <select
+					name="BezugsnummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Bezugsnummer"
+					name="Bezugsnummer" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Vorgangsnummer&nbsp; &nbsp; <select
+					name="VorgangsnummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Vorgangsnummer"
+					name="Vorgangsnummer" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Kundennummer&nbsp; &nbsp; <select
+					name="KundennummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Kundennummer"
+					name="Kundennummer" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Name1</td>
+				<td><input class="forminput" id="Name1" name="Name1" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Name2</td>
+				<td><input class="forminput" id="Name2" name="Name2" value="" /></td>
+			</tr>
+			<tr>
+				<td>Name3</td>
+				<td><input class="forminput" id="Name3" name="Name3" value="" /></td>
+			</tr>
+			<tr>
+				<td>Name4</td>
+				<td><input class="forminput" id="Name4" name="Name4" value="" /></td>
+			<tr>
+				<td>Strasse</td>
+				<td><input class="forminput" id="Strasse" name="Strasse"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>PLZ</td>
+				<td><input class="forminput" id="PLZ" name="PLZ" value="" /></td>
+			</tr>
+			<tr>
+				<td>Ort</td>
+				<td><input class="forminput" id="Ort" name="Ort" value="" /></td>
+			</tr>
+			<tr>
+				<td>Reisender</td>
+				<td><input class="forminput" id="Reisender" name="Reisender"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Reisedatum&nbsp; &nbsp; <select name="ReisedatumOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="ReisedatumEXT" name="ReisedatumEXT"
+					value="" />
+					<a href="#" onclick="cal.select(document.getElementById('ReisedatumEXT'),'ReisedatumMidocoBelegePopupExtended','yyyy-MM-dd'); return false;" name="ReisedatumMidocoBelegePopupExtended" id="ReisedatumMidocoBelegePopupExtended">select</a>
+					</td>
+			</tr>
+
+			<tr>
+				<td>Expedientennummer&nbsp; &nbsp; <select
+					name="ExpedientennummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Expedientennummer"
+					name="Expedientennummer" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Expedient</td>
+				<td><input class="forminput" id="Expedient" name="Expedient"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Kostenstelle&nbsp; &nbsp; <select
+					name="KostenstelleOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Kostenstelle"
+					name="Kostenstelle" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Auftragsnummer&nbsp; &nbsp; <select
+					name="AuftragsnummerOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Auftragsnummer"
+					name="Auftragsnummer" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Auftragsdatum&nbsp; &nbsp; <select
+					name="AuftragsdatumOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Auftragsdatum"
+					name="Auftragsdatum" value="" />
+					<a href="#" onclick="cal.select(document.getElementById('Auftragsdatum'),'AuftragsdatumPopupExtended','yyyy-MM-dd'); return false;" name="AuftragsdatumPopupExtended" id="AuftragsdatumPopupExtended">select</a>
+					</td>
+			</tr>
+
+			<tr>
+				<td>Besteller</td>
+				<td><input class="forminput" id="Besteller" name="Besteller"
+					value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Netto1&nbsp; &nbsp; <select name="Netto1Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Netto1" name="Netto1" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Netto2&nbsp; &nbsp; <select name="Netto2Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Netto2" name="Netto2" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>StKz2&nbsp; &nbsp; <select name="StKz2Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="StKz2" name="StKz2" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>MwSt2&nbsp; &nbsp; <select name="MwSt2Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="MwSt2" name="MwSt2" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Netto3&nbsp; &nbsp; <select name="Netto3Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Netto3" name="Netto3" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>StKz3&nbsp; &nbsp; <select name="StKz3Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="StKz3" name="StKz3" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>MwSt3&nbsp; &nbsp; <select name="MwSt3Operation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="MwSt3" name="MwSt3" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Brutto&nbsp; &nbsp; <select name="BruttoOperation">
+						<option value="=">=</option>
+						<option value="<">&lt;</option>
+						<option value="<=">&lt;=</option>
+						<option value=">">&gt;</option>
+						<option value=">=">&gt;=</option>
+						<option value="<>">&lt;&gt;</option>
+				</select>
+				</td>
+				<td><input class="forminput" id="Brutto" name="Brutto" value="" /></td>
+			</tr>
+
+			<tr>
+				<td>Waehrung</td>
+				<td><input class="forminput" id="Waehrung" name="Waehrung"
+					value="" /></td>
+			</tr>
+
+
+			<tr>
+				<td>SessionID</td>
+				<td><input class="forminput" id="SessionID" name="SessionID"
+					value="{*SessionID*}" readonly /></td>
+			</tr>
+
+			<tr>
+				<td><input class="formbutton" type="submit" value="Suchen" /></td>
+				<td><input class="formbutton" type="button"
+					onclick="resetFunction()" value="Reset"></td>
+			</tr>
+		</table>
+
+	</form>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Archive</title>
+
+<link type="text/css" rel="stylesheet" href="/Archive-Web/css/style.css"></link>
+<script type="text/javascript" src="/Archive-Web/js/javascript.js"></script>
+
+<script type="text/javascript" src="http://www.mattkruse.com/javascript/calendarpopup/combined-compact/CalendarPopup.js"></script>
+<script language="JavaScript"> var cal = new CalendarPopup(); </script>
+	
+<!--  for local testing -->
+<!-- <script type="text/javascript" src="js/javascript.js"></script> -->
+
+</head>
+<body>
+	<img src="/Archive-Web/img/tba-logo.png" class="formatlogo">
+	<h1>Parameter eingeben und auf Suchen klicken</h1>
+
+	<table class="formtable">
+		<tr>
+			<td>Dokumentart</td>
+			<td><select class="forminput" id="DocumentType"
+				onchange="archive_Selected_DocumentType_SearchType();">
+					<option value="AR">Ausgangsrechnungen</option>
+					<option value="BP">Buchungsprotkolle</option>
+					<option value="KR">Kostenrechnungen</option>
+					<option value="VR">Veranstalterrechnung</option>
+					<option value="MB" selected>Midoco Belege</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Art der Suche</td>
+			<td><select class="forminput"
+				onchange="archive_Selected_DocumentType_SearchType();"
+				id="SearchType">
+					<option value="Simple">Einfache Suche</option>
+					<option value="Extended">Erweiterte Suche</option>
+			</select></td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<br>
+	

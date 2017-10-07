@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Login</title>
+
+<link type="text/css" rel="stylesheet" href="/Archive-Web/css/style.css"></link>
+<script type="text/javascript" src="/Archive-Web/js/javascript.js"></script>
+
+</head>
+<body>
+
+	<img src="/Archive-Web/img/tba-logo.png" class="formatlogo">
+<br>
+<br>
+	<form method="post" action="/archive/" target="_self" id="formID">
+		<table class="formtableCenter">
+			<tr>
+				<td colspan="2">
+					<h1>Bitte melden Sie sich an.</h1>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Benutzerkennung</td>
+				<td><input class="forminput" id="user" name="userID" value=""></td>
+			</tr>
+
+			<tr>
+				<td>Passwort</td>
+				<td><input class="forminput" id="password" name="password" value=""  type="password"></td>
+			</tr>
+
+			<tr>
+				<td><input class="formbutton" value="Anmelden" type="submit"></td>
+				<td><input class="formbutton" value="Reset" onclick="resetFunction()" type="button"></td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>

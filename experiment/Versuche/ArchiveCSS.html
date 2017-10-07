@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>
+Archive
+</title>
+
+<style type="text/css">
+#VC
+{
+position:absolute;left:150px;top:50px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#VN
+{
+position:absolute;left:150px;top:85px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#B
+{
+position:absolute;left:150px;top:120px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#RE
+{
+position:absolute;left:150px;top:155px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#RD
+{
+position:absolute;left:200px;top:190px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#BC
+{
+position:absolute;left:200px;top:225px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#BT
+{
+position:absolute;left:150px;top:260px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#RDD
+{
+position:absolute;left:150px;top:190px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+
+#BCD
+{
+position:absolute;left:150px;top:225px;
+width:15px;height:5px;
+background-color:#efefef;
+}
+</style>
+
+</head>
+<body>
+<h3>Veranstalterrechnungen - Suche</h3>
+	<form method="post" action="/archive/Archive" target="_blank">
+		
+	
+		Barcode: 
+	   <div id="BCD"> 
+	   <select name="operation">
+                <option value="equals">=</option>
+                <option value="smaller_than">&lt;</option>
+                <option value="smaller_than">&lt;=</option>
+                <option value="larger_than">&gt;</option>
+                <option value="larger_than">&gt;=</option>
+        </select>
+        </div>
+		<div id="BC">
+		<input id="Barcode" name="Barcode" value="" />  
+		</div>
+		<br>
+		<br>
+		
+		Veranstaltercode:
+		<div id="VC"> 
+		<input id="Veranstaltercode" name="Veranstaltercode" value="" disabled/> 
+		</div>
+		<br>
+		<br>
+		Veranstaltername:
+		<div id="VN"><input id="Veranstaltername" name="Veranstaltername" value="" disabled/> </div>
+		<br>
+		<br>
+		Büro:
+		<div id="B"> <input id="Büro" name="Büro" value="" disabled/> </div>
+		<br>
+		<br>
+		Reisender:
+		<div id="RE"> <input id="Reisender" name="Reisender" value="" disabled/> </div>
+		<br>
+		<br>
+		Reisedatum:
+		<div id="RDD"> 
+		<select name="operation" disabled>
+                <option value="equals">=</option>
+                <option value="smaller_than">&lt;</option>
+                <option value="smaller_than">&lt;=</option>
+                <option value="larger_than">&gt;</option>
+                <option value="larger_than">&gt;=</option>
+        </select>
+        </div>
+        <div id="RD">
+        <input id="Reisedatum" name="Reisedatum" value="" disabled/> 
+        </div>
+        <br>
+        <br>
+		
+	<div id="BT">	<input type="submit" value="Suchen" /> </div>
+		
+	</form>
+
+</body>
+</html>
